@@ -15,7 +15,7 @@ var keylogRoutes=require('./keylogRoutes');
 
 //*****************************************/
 const connect = mongoose
-  .connect(db, { useUnifiedTopology:true,useNewUrlParser:true })
+  .connect(db,  { useFindAndModify: false,useUnifiedTopology:true,useNewUrlParser:true })
   .then(() => {
       console.log("Mondo db connected....")
       keylog.deleteMany({},function(err,res){
