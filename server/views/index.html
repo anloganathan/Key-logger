@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <!--<link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" href="style.css">
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
@@ -24,12 +24,13 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top w3-panel w3-border w3-round-large" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <!--<i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>-->
     <h3 class="w3-wide"><b>Keylogger</b></h3>
+    <div>Connected Hosts</div>
   </div>
-  <div id="mySidenav" class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+  <div id="mySidenav" class="w3-padding-5 w3-large w3-text-grey" style="font-weight:bold">
     
   </div>
 
@@ -37,7 +38,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">Keylogger</div>
+  <div class="w3-bar-item w3-padding-24 w3-wide" >Keylogger</div>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
@@ -45,15 +46,21 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main content" style="margin-left:250px">
+<div class="w3-main " style="margin-left:250px">
 
   <!-- Push down content on small screens -->
   <div class="w3-hide-large " style="margin-top:83px">
   </div>
 
   <div class="w3-container w3-padding-32">
-    
-    <p id="content" style="word-break: break-word;" ></p>
+
+
+<div class="w3-container w3-teal w3-panel w3-topbar w3-border-black w3-pale-blue" style="min-height:500px;position:relative;">
+  <p id="username" style="word-break: break-word;padding:10px;" ></p>
+  <div id="keys"></div>
+
+</div>
+
   
   </div>
   
@@ -74,36 +81,7 @@ function w3_close() {
 }
 </script>
 
-
-
-<!--<div class="topnav">
-  <a id="main" class="active" style="cursor:pointer" onclick="openNav()">Hosts</a>
-</div>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-</div>
-
-
-<div id="content" style="padding-left:16px">
-  
-</div>
--->
-
 <script src="app.js">
-</script>
-
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
 </script>
 
 </body>
